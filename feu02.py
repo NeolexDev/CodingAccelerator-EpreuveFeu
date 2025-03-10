@@ -45,15 +45,14 @@ def to_matrix(content):
     for line in content.split("\n"):
         if len(line) > 0 :
             matrix.append(list(line))
-
     return matrix
+
 def check_pattern(board,first,to_find):
     matrix_board = to_matrix(board)
     height = len(matrix_board)
     width = len(matrix_board[0])
     (first_x,first_y) = first
     coords = []
-    
     current_x = 0
     current_y = 0
     for c in to_find:
